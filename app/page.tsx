@@ -74,7 +74,7 @@ export default function Home() {
           </h2>
           
           <div className="mb-8">
-            <a href="#" className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+            <Link href="/projects/ai-trading-journal" className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
               <h3 className="text-xl font-semibold mb-2">
                 {language === 'zh' ? 'AI交易复盘工具' : 'AI Trading Journal'}
               </h3>
@@ -89,7 +89,7 @@ export default function Home() {
                 <span className="px-2 py-1 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded">Trading</span>
                 <span className="px-2 py-1 text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded">Productivity</span>
               </div>
-            </a>
+            </Link>
           </div>
 
           <a href="#projects" className="text-blue-600 dark:text-blue-400 hover:underline">

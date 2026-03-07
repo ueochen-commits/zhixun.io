@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useLanguage, useTheme } from '@/components/LanguageContext'
+import { Mail, MessageCircle } from 'lucide-react'
 
 // 首页展示的最新文章（按日期排序，最新在前）
 const recentPosts = [
@@ -51,12 +52,20 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
         <nav className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#" className="font-semibold text-lg">{name}</a>
+          {/* Logo */}
+          <a href="#" className="flex items-center gap-2 group">
+            <img
+              src="/images/avatar.png"
+              alt="Avatar"
+              className="w-8 h-8 rounded-lg object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+            />
+            <span className="font-semibold text-lg transition-all duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">{name}</span>
+          </a>
           <div className="flex items-center gap-6">
-            <a href="#home" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
-            <a href="#projects" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#about" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
-            <Link href="/blog" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</Link>
+            <a href="#home" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110">Home</a>
+            <a href="#projects" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110">Projects</a>
+            <a href="#about" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110">About</a>
+            <Link href="/blog" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110">Blog</Link>
             <button
               onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')}
               className="text-sm text-zinc-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -102,7 +111,7 @@ export default function Home() {
             <div className="flex gap-4">
               <button
                 onClick={() => setShowContact(!showContact)}
-                className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-600/25 active:scale-95"
               >
                 {language === 'zh' ? '联系我' : 'Contact Me'}
               </button>
@@ -110,24 +119,28 @@ export default function Home() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2 border border-zinc-300 dark:border-zinc-700 hover:border-blue-600 dark:hover:border-blue-400 rounded-lg transition-colors"
+                className="inline-block px-6 py-2 border border-zinc-300 dark:border-zinc-700 hover:border-blue-600 dark:hover:border-blue-400 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md active:scale-95"
               >
                 LinkedIn
               </a>
             </div>
-            {/* Contact Info Panel - expand below buttons */}
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="pt-2 space-y-2">
-                <a href="mailto:ueochen@gmail.com" className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            {/* Contact Info Panel */}
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="pt-3 space-y-2">
+                <a href="mailto:ueochen@gmail.com" className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600 transition-colors">
+                  <Mail className="w-4 h-4" />
                   <span>ueochen@gmail.com</span>
                 </a>
-                <div className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                <div className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400">
+                  <MessageCircle className="w-4 h-4" />
                   <span>WeChat: Timetravel_0</span>
                 </div>
-                <a href="https://instagram.com/scarlet_leopard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <a href="https://instagram.com/scarlet_leopard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600 transition-colors">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
                   <span>Instagram: Scarlet_Leopard</span>
                 </a>
               </div>
@@ -142,7 +155,7 @@ export default function Home() {
           </h2>
           
           <div className="mb-8">
-            <Link href="/projects/ai-trading-journal" className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+            <Link href="/projects/ai-trading-journal" className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <h3 className="text-xl font-semibold mb-2">
                 {language === 'zh' ? 'AI交易复盘工具-TradeGrail' : 'AI Trading Journal - TradeGrail'}
               </h3>
@@ -176,7 +189,7 @@ export default function Home() {
               <Link 
                 key={post.slug} 
                 href={`/blog/${post.slug}`}
-                className="block p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+                className="block p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
               >
                 <div className="flex items-center justify-between">
                   <div>

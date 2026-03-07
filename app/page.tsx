@@ -106,13 +106,20 @@ export default function Home() {
               {language === 'zh' ? '联系我' : 'Contact Me'}
             </button>
             {/* Contact Info Panel */}
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-w-96 opacity-100' : 'max-w-0 opacity-0'}`}>
-              <div className="flex gap-3 pl-2">
-                <a href="mailto:ueochen@gmail.com" className="text-sm text-blue-600 hover:underline">Email</a>
-                <span className="text-zinc-400">|</span>
-                <span className="text-sm text-zinc-600 dark:text-zinc-400">WeChat: Timetravel_0</span>
-                <span className="text-zinc-400">|</span>
-                <a href="https://instagram.com/scarlet_leopard" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">Instagram</a>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="pt-3 space-y-2">
+                <a href="mailto:ueochen@gmail.com" className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600">
+                  <span>📧</span>
+                  <span>ueochen@gmail.com</span>
+                </a>
+                <div className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                  <span>💬</span>
+                  <span>WeChat: Timetravel_0</span>
+                </div>
+                <a href="https://instagram.com/scarlet_leopard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600">
+                  <span>📷</span>
+                  <span>Instagram: Scarlet_Leopard</span>
+                </a>
               </div>
             </div>
             <a

@@ -6,6 +6,12 @@ import { useLanguage, useTheme } from '@/components/LanguageContext'
 // 首页展示的最新文章（按日期排序，最新在前）
 const recentPosts = [
   {
+    slug: 'ai-solopreneur',
+    title: '国企离职：我是如何用AI搭建"自我进化"的一人公司的？',
+    titleEn: 'How I Built an AI-Powered Solopreneur After Leaving the SOE',
+    date: '2026-03-07'
+  },
+  {
     slug: 'openclaw-minimax-api-config',
     title: 'OpenClaw 连接 MiniMax 国内版 API 避坑指南',
     titleEn: 'OpenClaw MiniMax API Configuration Guide',

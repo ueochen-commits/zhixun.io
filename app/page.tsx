@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import { useLanguage, useTheme } from '@/components/LanguageContext'
 
 // 首页展示的最新文章（按日期排序，最新在前）
@@ -40,6 +41,7 @@ const recentPosts = [
 export default function Home() {
   const { language, setLanguage, t } = useLanguage() || { language: 'en' as const, setLanguage: () => {}, t: (zh: string, en: string) => en }
   const { theme, toggleTheme } = useTheme() || { theme: 'light' as const, toggleTheme: () => {} }
+  const [showContact, setShowContact] = useState(false)
 
   const name = language === 'zh' ? '陈峙寻' : 'Zhixun Chen'
   const location = language === 'zh' ? '广州，中国' : 'Guangzhou, China'
@@ -96,13 +98,23 @@ export default function Home() {
               'Solopreneur | Prop Firm Trader | Content Creator'
             )}
           </p>
-          <div className="flex gap-4">
-            <a
-              href="mailto:ueochen@gmail.com"
+          <div className="flex gap-4 items-start">
+            <button
+              onClick={() => setShowContact(!showContact)}
               className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
               {language === 'zh' ? '联系我' : 'Contact Me'}
-            </a>
+            </button>
+            {/* Contact Info Panel */}
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-w-96 opacity-100' : 'max-w-0 opacity-0'}`}>
+              <div className="flex gap-3 pl-2">
+                <a href="mailto:ueochen@gmail.com" className="text-sm text-blue-600 hover:underline">Email</a>
+                <span className="text-zinc-400">|</span>
+                <span className="text-sm text-zinc-600 dark:text-zinc-400">WeChat: Timetravel_0</span>
+                <span className="text-zinc-400">|</span>
+                <a href="https://instagram.com/scarlet_leopard" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">Instagram</a>
+              </div>
+            </div>
             <a
               href="https://linkedin.com"
               target="_blank"

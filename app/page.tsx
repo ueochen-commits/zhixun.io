@@ -18,6 +18,7 @@ export default function Home() {
           <a href="#" className="font-semibold text-lg">{name}</a>
           <div className="flex items-center gap-6">
             <a href="#home" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+            <a href="/blog" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
             <a href="#projects" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
             <a href="#about" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
             <button

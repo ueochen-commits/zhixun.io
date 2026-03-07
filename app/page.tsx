@@ -3,6 +3,34 @@
 import Link from 'next/link'
 import { useLanguage, useTheme } from '@/components/LanguageContext'
 
+// 首页展示的最新文章（按日期排序，最新在前）
+const recentPosts = [
+  {
+    slug: 'openclaw-minimax-api-config',
+    title: 'OpenClaw 连接 MiniMax 国内版 API 避坑指南',
+    titleEn: 'OpenClaw MiniMax API Configuration Guide',
+    date: '2026-03-06'
+  },
+  {
+    slug: 'from-soe-to-solopreneur',
+    title: '从国企离职到一人公司：我做了什么选择',
+    titleEn: 'From SOE to Solopreneur: My Choice',
+    date: '2026-03-05'
+  },
+  {
+    slug: 'ai-learning-journey',
+    title: 'AI小白的学习之路：从0到1使用AI工具',
+    titleEn: 'AI Learning Journey: From 0 to 1',
+    date: '2026-03-04'
+  },
+  {
+    slug: 'trading-journal-launch',
+    title: '我的第一个产品：AI交易复盘工具上线了',
+    titleEn: 'My First Product: AI Trading Journal Launched',
+    date: '2026-03-03'
+  }
+]
+
 export default function Home() {
   const { language, setLanguage, t } = useLanguage() || { language: 'en' as const, setLanguage: () => {}, t: (zh: string, en: string) => en }
   const { theme, toggleTheme } = useTheme() || { theme: 'light' as const, toggleTheme: () => {} }
@@ -18,20 +46,32 @@ export default function Home() {
           <a href="#" className="font-semibold text-lg">{name}</a>
           <div className="flex items-center gap-6">
             <a href="#home" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
-            <a href="/blog" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
             <a href="#projects" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
             <a href="#about" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+            <Link href="/blog" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</Link>
             <button
               onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')}
-              className="text-sm px-2 py-1 border border-zinc-300 dark:border-zinc-700 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              className="text-sm text-zinc-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              {language === 'zh' ? 'EN' : '中文'}
+              {language === 'zh' ? 'EN' : '中'}
             </button>
             <button
               onClick={toggleTheme}
-              className="text-sm px-2 py-1 border border-zinc-300 dark:border-zinc-700 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {theme === 'light' ? (
+                // Moon icon - click to switch to dark mode
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              ) : (
+                // Sun icon - click to switch to light mode
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="5" />
+                  <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+              )}
             </button>
           </div>
         </nav>
@@ -77,7 +117,7 @@ export default function Home() {
           <div className="mb-8">
             <Link href="/projects/ai-trading-journal" className="block p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
               <h3 className="text-xl font-semibold mb-2">
-                {language === 'zh' ? 'AI交易复盘工具' : 'AI Trading Journal'}
+                {language === 'zh' ? 'AI交易复盘工具-TradeGrail' : 'AI Trading Journal - TradeGrail'}
               </h3>
               <p className="text-zinc-600 dark:text-zinc-400 mb-4">
                 {t(
@@ -96,6 +136,36 @@ export default function Home() {
           <a href="#projects" className="text-blue-600 dark:text-blue-400 hover:underline">
             {language === 'zh' ? '更多项目敬请期待 →' : 'More Projects Coming Soon →'}
           </a>
+        </section>
+
+        {/* Latest Blog Posts */}
+        <section id="blog" className="max-w-4xl mx-auto px-6 py-12">
+          <h2 className="text-2xl font-semibold mb-8">
+            {language === 'zh' ? '最新文章' : 'Latest Posts'}
+          </h2>
+          
+          <div className="space-y-4">
+            {recentPosts.map((post) => (
+              <Link 
+                key={post.slug} 
+                href={`/blog/${post.slug}`}
+                className="block p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-medium">
+                      {language === 'zh' ? post.title : post.titleEn}
+                    </h3>
+                  </div>
+                  <span className="text-sm text-zinc-500">{post.date}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <Link href="/blog" className="inline-block mt-6 text-blue-600 dark:text-blue-400 hover:underline">
+            {language === 'zh' ? '查看更多文章 →' : 'View All Posts →'}
+          </Link>
         </section>
 
         {/* About */}

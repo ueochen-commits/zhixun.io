@@ -6,6 +6,15 @@ import { useLanguage } from '@/components/LanguageContext'
 // 博客文章数据
 const posts = [
   {
+    slug: 'ai-solopreneur',
+    title: '国企离职：我是如何用AI搭建"自我进化"的一人公司的？',
+    titleEn: 'How I Built an AI-Powered Self-Evolving Solopreneur After Leaving the SOE',
+    date: '2026-03-07',
+    excerpt: '2026年的第一天，我决定离开体制。在体制内的三年，我什么都没有带走，反而感觉被剥夺了许多...',
+    excerptEn: 'On the first day of 2026, I decided to leave the system. After three years in the SOE, I felt deprived of many things...',
+    tags: ['AI', '创业', '国企', 'Solopreneur']
+  },
+  {
     slug: 'openclaw-minimax-api-config',
     title: 'OpenClaw 连接 MiniMax 国内版 API 避坑指南',
     titleEn: 'OpenClaw MiniMax API Configuration Guide',

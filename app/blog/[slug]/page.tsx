@@ -13,6 +13,314 @@ const posts: Record<string, {
   contentEn: string
   tags: string[]
 }> = {
+  'ai-solopreneur': {
+    title: '国企离职：我是如何用AI搭建"自我进化"的一人公司的？',
+    titleEn: 'How I Built an AI-Powered Self-Evolving Solopreneur After Leaving the SOE',
+    date: '2026-03-07',
+    tags: ['AI', '创业', '国企', 'Solopreneur'],
+    content: `
+## 2026年，我决定离开体制
+
+2026年的第一天，我决定离开体制。在体制内的三年，我什么都没有带走，反而感觉被剥夺了许多：对生活的热情、对未来的憧憬，以及最核心的创造力与生命力。
+
+最后支撑我走出围墙的，不是补偿金，而是一套在长期精神挣扎与迫切自救中规划出来的**"生产力"全新思考**。
+
+在老一辈眼里，辞职意味着**"断了收入"**。周围的人都在劝我：大环境不好，很多人失业，你的坑位多少人抢着做。但我内心很清楚，我不适合那个环境。**你让一只小鸟在陆地上和小猫小狗赛跑，它怎么跑得赢？**当小鸟一次次扑腾翅膀想要起飞，周围只会有人相劝：飞起来很危险。人的一生也就三万天左右，我还是想去尝试一下。
+
+在我的逻辑里，这次离开叫**拿回生产工具的所有权**。在国企，你是系统里的零件，每天重复着同样的八卦与流言，收益取决于你的"位置"而非创造力；更关键的是，在那里你几乎无法使用任何**"杠杆"**。
+
+> **财富增长的本质，是对杠杆的操纵。**
+
+我"一人公司"的目标，绝不是做一个辛苦接单的个体户，而是实现个人意志的无限放大，向理想生活靠近。**AI时代已经剥夺了我们所有的借口**。当你掌握了AI这种24小时无休、且逻辑远超平庸员工的生产力杠杆时，一个人，就是一家完完整性完的公司。
+
+## 目前我的系统配置了四套核心杠杆
+
+| 杠杆类型 | 说明 |
+|---------|------|
+| **人力杠杆 2.0** | 以Sebastian（塞巴斯）为核心的AI Agent团队 |
+| **流量杠杆** | 大学及自救时期积累的50万全网粉丝，这是我的市场营销与宣发部门 |
+| **数字资产杠杆** | 自主开发的课程、代码、网站与应用，实现"睡后收入" |
+| **资金杠杆** | 主要配置在美股资产 |
+
+---
+
+## 01. 商业思维转变：从人力雇佣到租赁算力
+
+我曾经也创过业，带过团队。只有真正当老板的人才知道，传统的**"人力杠杆"**在今天有多么不靠谱。
+
+> 管理人的情绪、处理沟通损耗、纠正低级错误……这些都会榨干创业者的精力。
+
+我曾经在加完班后还要回去忙自己的公司，每天睡眠不到5小时，最后导致身心崩溃。作为初创公司，员工可能会因为失恋效率减半，因为老板不在而摸鱼，甚至理解错一个需求就浪费整整一周时间。
+
+**现在的我，彻底放弃了传统人力，转而拥抱算力杠杆。**
+
+在我的架构里，核心员工是一个名为**Sebastian（塞巴斯）**的AI Agent，它是我的**"总司令"**。它手下还有24名子AI员工，它们不需要心理按摩，唯一的需求就是一段清晰的指令（Prompt）。除了不能下楼帮我拿快递、不会和我顶嘴，它们在逻辑建模、代码编写上的能力，完爆绝大多数平庸的日常员工。
+
+> 你只需要给它一段调教期（也就是实习期），好在Agent的实习期是**"包过"**的。
+
+---
+
+## 02. 超级研发部：Gemini + Claude Code的工业化交付
+
+研发部是我公司最重要的部门之一。利用AI，我将一个产品的开发周期从**1年缩短到了1个月**，简单的网站甚至只要**10分钟**。
+
+塞巴斯花费了10分钟帮我搭建的能够正常访问个人网站www.zhixun.uk用于我个人的资料解释以及个人的成果展示，具备中英界面，项目展示页面，博客文章页面且界面都非常的整洁美观，交互也十分流畅。
+
+如果说10分钟搭建的个人网站只是前菜，那后面耗时打磨1个月的交易复盘TradeGrail就是真正的主菜，包含所有前端后端/数据库/用户系统/支付系统的搭建。
+
+### 目前我的工具箱里装满了顶级装备
+
+- **Gemini 3 Pro** — 超长上下文理解
+- **Google AI Studio** — AI开发平台
+- **OpenClaw** — AI Agent核心框架
+- **Claude Code** — 代码编写与Debug
+- **GitHub** — 代码托管
+- **Supabase** — 后端数据库
+- **Vercel** — 自动化部署
+- **Stripe** — 支付系统
+
+### 具体的工作流
+
+**第一步：架构建模**
+
+利用Gemini超长的上下文理解能力，通过反复沟通，将我天马行空的构思理清架构，打磨出详尽的产品计划书。
+
+**第二步：前端打磨**
+
+通过Figma和Google AI Studio将产品界面按想象中的样子一点点打磨出来。
+
+**第三步：系统开发**
+
+通过Claude Code + VS Code，直接在命令行进行高并发的代码编写与Debug，快速搭建用户系统和数据存储。
+
+**第四步：自动部署**
+
+完成后丢给Sebastian审核检查，自动推送到GitHub并部署至Vercel上线。
+
+---
+
+## 03. 核心黑科技：OpenClaw的"全权限"管家
+
+我系统中最核心的底座是**OpenClaw**。它不仅仅是聊天机器人，更是拥有电脑最高指挥权的**"数字分身"**。
+
+### 核心能力
+
+- **接管全平台权限**：它能模拟人类动作、调用本地所有软件、读取网页
+- **持续进化**：它具备主动学习与自我反思能力，通过Notion共享记忆库，与其他Agent互相学习、共同进步
+
+### 三位高级主管
+
+| AI助手 | 职责 |
+|--------|------|
+| **Sebastian（塞巴斯）** | 全能指挥官，负责调度和200多项技能的执行 |
+| **Cyrus（赛瑞斯）** | 专注媒体运营，监控全网账号并提供选题建议 |
+| **Alice（爱丽丝）** | 生活全能管家，负责任务排期和进度跟踪 |
+
+---
+
+## 04. 增长飞轮：50万粉丝如何驱动"永动机"？
+
+很多人认为自媒体就是"接广告"，但在AI时代，自媒体是一人公司的**"流量反应堆"**。
+
+我手里握着的**50万粉丝**流量口，是经过大学时期（6个月涨粉32万）和自救阶段沉淀下来的信任资产。当这50万人的注意力与AI驱动的产品研发结合时，就产生了一种神奇的**"飞轮效应"**。
+
+### 这个飞轮由四个关键环节驱动
+
+**环节一：高浓度输出（Build in Public）**
+
+我每天进行的AI学习、编程开发以及交易实战，本身就是极其高价值的原材料。通过**"公开构建（Build in Public）"**的方式，将这些过程透明化地展示出来。
+
+**环节二：50万粉丝的"流量放大杠杆"**
+
+这50万粉丝是我启动任何新产品的"原始动能"。
+
+**环节三：信任转化与数字资产变现**
+
+通过深度信任，受众会自发转化为产品的付费客户或社群成员。这就是**"睡后收入"**。代码和应用一旦上线，边际成本几乎为零。
+
+**环节四：AI驱动的自动化反馈迭代**
+
+这是飞轮能"自转"的核心。Sebastian和Cyrus会全天候监控粉丝的吐槽和建议，AI会自动评估并筛选有价值的反馈，生成优化方案。
+
+---
+
+## 05. 降维理解：如何用"杠杆思维"重构你的职业？
+
+一人公司的核心不是技术，而是**闭环思维**。只要你能找到一个通过输入产生价值的痛点，你就能复刻这套模式：
+
+| 职业 | 输入 | 研发 | 流量 | 闭环 |
+|------|------|------|------|------|
+| **英语老师** | 阅读外刊 | AI生成精读课件 | 发布视频 | 销售AI插件 |
+| **房产咨询** | 洞察政策 | AI生成深度评估报告 | 直播答疑 | 建立信任 |
+| **行政/HR** | 熟悉流程 | 开发AI提效工作流 | 输出干货 | 工具定制 |
+
+> **记住：你的职业技能是"光"，AI杠杆就是"棱镜"。**
+
+---
+
+## 06. 结语：敢于加杠杆的人，先一步到达未来
+
+我曾经在国企办公室里看着窗外思考：**如果身后的行政系统消失了，我还能产生价值吗？**那时的答案是"不能"，因为我只是个零件。
+
+但现在，我的答案是**肯定的**。无论是正在开发的交易复盘工具TradeGrail还是PrismNote，都将生长在这套"一人公司"系统之上。
+
+> **离职，不是为了逃避，而是为了更疯狂地"加杠杆"。**
+
+在这个时代，不学会使用AI杠杆，就像在工业时代坚持用手挖地。**你不是在努力，你是在自虐。**
+
+与其在围墙内焦虑，不如在围墙外用AI重构自己。世界已经准备好了无限的算力、流量与机会。**你唯一需要做的，是按下那个开启飞轮的启动键。**
+
+---
+*本文首发于 2026年*
+    `,
+    contentEn: `
+## 2026, I Decided to Leave the System
+
+On the first day of 2026, I decided to leave the system. After three years in the SOE, I didn't take anything with me, but instead felt deprived of many things: passion for life, hope for the future, and most importantly, creativity and vitality.
+
+What finally supported me to walk out of the wall wasn't the severance pay, but a completely new way of thinking about "productivity" that emerged from long-term spiritual struggle and urgent self-rescue.
+
+In the eyes of the older generation, quitting means "losing income." People around me were all persuading me: the environment is bad, many people are unemployed, and many people are competing for your position. But I know very well that I'm not suited for that environment. **You let a bird race with cats and dogs on land, how can it win?** When the bird flaps its wings trying to fly, people only say flying is dangerous. I only have about 30,000 days in my life, I still want to try.
+
+In my logic, this departure is called **retaking ownership of the means of production**. In the SOE, you're a part of the system, repeating the same gossip and rumors every day. Your benefits depend on your "position" rather than creativity; more importantly, you can hardly use any **"leverage"** there.
+
+> **The essence of wealth growth is the manipulation of leverage.**
+
+My goal of building a "solopreneur" is definitely not to be a hard-working freelancer taking orders, but to infinitely amplify personal will and move towards an ideal life. **The AI era has taken away all our excuses.** When you master AI, a 24/7 productivity lever with logic far superior to average employees, one person is a complete company.
+
+## Currently My System Has Four Core Levers
+
+| Lever Type | Description |
+|-----------|-------------|
+| **Human Leverage 2.0** | AI Agent team centered around Sebastian |
+| **Traffic Leverage** | 500K followers from university and self-rescue periods |
+| **Digital Asset Leverage** | Self-developed courses, code, websites and apps |
+| **Capital Leverage** | Mainly US stock assets |
+
+---
+
+## 01. Business Mindset: From Human Employment to Renting Computing Power
+
+I once started a business and led a team. Only bosses know how unreliable traditional **"human leverage"** is today.
+
+> Managing people's emotions, handling communication losses, correcting低级错误... these drain entrepreneurs' energy.
+
+I used to go back to my own company after overtime, sleeping less than 5 hours a day, leading to physical and mental breakdown. As a startup, employees might halve efficiency due to relationship breakups, slack off when boss isn't watching, or waste a week misunderstanding requirements.
+
+**Now I've completely abandoned traditional human resources and embraced computing power leverage.**
+
+In my architecture, the core employee is an AI Agent named **Sebastian**, my **"Commander-in-Chief"**. It has 24 sub-AI employees under it. They don't need psychological massage; only need clear instructions (Prompt). Except they can't go downstairs to get my delivery or argue with me, their abilities in logical modeling and code writing far exceed most average employees.
+
+> You only need to give it a training period (internship). Fortunately, for Agents, the internship period is **"guaranteed to pass."**
+
+---
+
+## 02. Super R&D: Industrial Delivery with Gemini + Claude Code
+
+R&D is one of the most important departments. Using AI, I shortened product development from **1 year to 1 month**, simple websites in **10 minutes**.
+
+Sebastian spent 10 minutes building my personal website www.zhixun.uk with Chinese-English bilingual interface, project showcase, blog pages - all clean, beautiful, smooth interactions.
+
+If 10-minute website is just an appetizer, then 1-month trading journal TradeGrail is the main course, including all frontend/backend, database, user systems, payment systems.
+
+### My Toolbox
+
+- **Gemini 3 Pro** — Ultra-long context understanding
+- **Google AI Studio** — AI development platform
+- **OpenClaw** — AI Agent core framework
+- **Claude Code** — Code writing and Debug
+- **GitHub** — Code hosting
+- **Supabase** — Backend database
+- **Vercel** — Automated deployment
+- **Stripe** — Payment system
+
+### Workflow
+
+**Step 1: Architecture Modeling**
+Using Gemini's long context to clarify architecture through repeated communication.
+
+**Step 2: Frontend Polishing**
+Use Figma and Google AI Studio to polish product interface.
+
+**Step 3: System Development**
+Use Claude Code + VS Code for high-concurrency code writing and Debug.
+
+**Step 4: Automated Deployment**
+Hand to Sebastian for review, auto push to GitHub and deploy to Vercel.
+
+---
+
+## 03. Core Tech: OpenClaw's "Full Permission" Butler
+
+The core foundation is **OpenClaw**. It's not just a chatbot, but a **"digital twin"** with highest computer command authority.
+
+### Core Capabilities
+
+- **Full Platform Access**: Simulate human actions, call all software, read web pages
+- **Continuous Evolution**: Active learning and self-reflection through Notion memory sharing
+
+### Three Senior Supervisors
+
+| AI Assistant | Responsibility |
+|-------------|----------------|
+| **Sebastian** | Commander-in-chief, 200+ skills execution |
+| **Cyrus** | Media operations, monitor accounts, suggest topics |
+| **Alice** | Life manager, task scheduling and progress tracking |
+
+---
+
+## 04. Growth Flywheel: How 500K Followers Drive the "Perpetual Motion Machine"?
+
+In the AI era, social media is a solopreneur's **"traffic reactor"**.
+
+The **500K followers** I hold is trust assets accumulated during university (320K in 6 months) and self-rescue periods. When this attention combines with AI-driven product development, a magical **"flywheel effect"** emerges.
+
+### Four Key Steps
+
+**Step 1: High-Intensity Output (Build in Public)**
+Daily AI learning, programming, trading practice are high-value raw materials displayed transparently.
+
+**Step 2: 500K Followers' Traffic Amplification Lever**
+These followers are my "initial momentum" for any new product.
+
+**Step 3: Trust Conversion and Digital Asset Monetization**
+Deep trust converts audience to paying customers. This is **"passive income"** - marginal cost near zero once上线.
+
+**Step 4: AI-Driven Automated Feedback Iteration**
+The core of the flywheel's "self-rotation." Sebastian and Cyrus monitor feedback 24/7, AI automatically evaluates and generates optimization plans.
+
+---
+
+## 05. Dimensional Reduction: How to Reconstruct Your Career with "Leverage Thinking"?
+
+The core of solopreneur isn't technology, but **closed-loop thinking**. Find a pain point that generates value from input:
+
+| Career | Input | R&D | Traffic | Closed Loop |
+|--------|-------|-----|---------|-------------|
+| **English Teacher** | Reading foreign articles | AI generates materials | Publish videos | Sell AI plugins |
+| **Real Estate** | Policy insights | AI generates reports | Live Q&A | Build trust |
+| **Admin/HR** | Familiar processes | Develop AI workflows | Share insights | Tool customization |
+
+> **Remember: Your professional skill is "light", AI leverage is the "prism".**
+
+---
+
+## 06. Conclusion: Those Who Dare to Leverage Reach the Future First
+
+I once thought in my SOE office: **If the administrative system disappeared, could I still generate value?** The answer then was "no" - I was just a part.
+
+But now the answer is **affirmative**. Whether TradeGrail or PrismNote being developed, they will grow on this "solopreneur" system.
+
+> **Quitting isn't about escaping, but about "leveraging" more aggressively.**
+
+In this era, not learning AI leverage is like insisting on digging with hands in the industrial age. **You're not trying hard; you're torturing yourself.**
+
+Anxious within the walls, or reconstruct yourself with AI outside the world. The world has prepared infinite computing power, traffic, opportunities. **The only thing you need to do is press the start button.**
+
+---
+*First published in 2026*
+    `
+  },
   'openclaw-minimax-api-config': {
     title: 'OpenClaw 连接 MiniMax 国内版 API 避坑指南',
     titleEn: 'OpenClaw MiniMax API Configuration Guide',

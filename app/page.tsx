@@ -99,13 +99,23 @@ export default function Home() {
             )}
           </p>
           <div className="flex flex-col items-start gap-2">
-            <button
-              onClick={() => setShowContact(!showContact)}
-              className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-            >
-              {language === 'zh' ? '联系我' : 'Contact Me'}
-            </button>
-            {/* Contact Info Panel - expand below button */}
+            <div className="flex gap-4">
+              <button
+                onClick={() => setShowContact(!showContact)}
+                className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+              >
+                {language === 'zh' ? '联系我' : 'Contact Me'}
+              </button>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-2 border border-zinc-300 dark:border-zinc-700 hover:border-blue-600 dark:hover:border-blue-400 rounded-lg transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
+            {/* Contact Info Panel - expand below buttons */}
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${showContact ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="pt-2 space-y-2">
                 <a href="mailto:ueochen@gmail.com" className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600">
@@ -122,14 +132,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-2 border border-zinc-300 dark:border-zinc-700 hover:border-blue-600 dark:hover:border-blue-400 rounded-lg transition-colors"
-            >
-              LinkedIn
-            </a>
           </div>
         </section>
 

@@ -5,6 +5,9 @@ import { LanguageProvider, ThemeProvider } from '@/components/LanguageContext'
 export const metadata: Metadata = {
   title: 'Zhixun Chen | 陈峙寻',
   description: 'Solopreneur | Prop Firm Trader | Content Creator',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

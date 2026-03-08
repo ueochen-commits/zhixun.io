@@ -145,6 +145,36 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            {/* Social Media Links */}
+            <div className="flex items-center gap-4 pt-3">
+              <span className="text-sm text-zinc-500">{language === 'zh' ? '关注我' : 'Follow Me'}</span>
+              <div className="flex gap-3">
+                {/* 抖音 */}
+                <a href="https://v.douyin.com/N3YWXKC_6Ho/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="抖音">
+                  <img src="/images/social-douyin.png" alt="抖音" className="w-5 h-5" />
+                </a>
+                {/* 小红书 */}
+                <a href="https://xhslink.com/m/idbwe8j0I0" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="小红书">
+                  <img src="/images/social-gongzhonghao.png" alt="小红书" className="w-5 h-5" />
+                </a>
+                {/* B站 */}
+                <a href="https://b23.tv/qijqrNI" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="B站">
+                  <img src="/images/social-bilibili-new.png" alt="B站" className="w-5 h-5" />
+                </a>
+                {/* YouTube */}
+                <a href="https://youtube.com/@fomotraderofficial?si=9aOdMuHOOgow3Hmt" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="YouTube">
+                  <img src="/images/social-youtube-new.png" alt="YouTube" className="w-5 h-5" />
+                </a>
+                {/* 微博 */}
+                <a href="https://weibo.com/u/8017993673" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="微博">
+                  <img src="/images/social-weibo.png" alt="微博" className="w-5 h-5" />
+                </a>
+                {/* 公众号 */}
+                <a href="https://mp.weixin.qq.com/s/AljC9_i8fcQQrAnJSSRFUw" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 hover:scale-110 transition-all duration-300" title="公众号">
+                  <img src="/images/social-weixin.png" alt="公众号" className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
